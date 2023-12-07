@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $title = "Home";
+    $message = "Hello, you are in $title now";
+    return view('home', compact("title", "message"));
+});
+
+Route::get('/login', function () {
+    $title = "Login";
+    $message = "Hello, you are in $title now";
+    return view('login', compact("title", "message"));
+});
+
+Route::get('/support', function () {
+    $title = "Support";
+    $message = "Hello, you are in $title now";
+    return view('support', compact("title", "message"));
 });
